@@ -1,7 +1,7 @@
 #Method 4
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def generate_sentence(statement):
     prompt = f"using the first letters of the sentence make a name of a person or place{words}."

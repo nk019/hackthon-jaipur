@@ -1,7 +1,7 @@
 #Method 1-
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def generate_words(letters):
     prompt = f"Generate gramatically correct and new sentence using the first letters of the words {letters}."

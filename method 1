@@ -1,0 +1,28 @@
+#Method 1-
+import openai
+
+openai.api_key = "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"
+
+def generate_words(letters):
+    prompt = f"Generate gramatically correct and new sentence using the first letters of the words {letters}."
+    response = openai.Completion.create(
+        engine="text-davinci-003",
+        prompt=prompt,
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.8,
+    )
+    return response.choices[0].text.strip()
+
+#takes the input from the user
+statement = input("write the sentence that you want to memorise: ")
+
+words = statement.split()
+
+# Extract the first letter of each word and create a new word
+new_words = [word[0] for word in words]
+
+N_words = generate_words(new_words)
+
+print(N_words)
